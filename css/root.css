@@ -1,0 +1,10 @@
+:root {
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #f2f2f2;
+  --product-bg-color: #e4e4e4;
+  --h1-color: #103444;
+  --p-color: #000;
+  --h1-fs: 40px;
+  --h1-ff: "Poppins", sans-serif, arial;
+  --button-color: #4bb543;
+}

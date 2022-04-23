@@ -1,0 +1,23 @@
+.about {
+  max-width: 90%;
+  padding: 0 10px;
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow-large);
+}
+.about h1 {
+  text-align: center;
+  margin: 40px;
+}
+.about-page_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+.about_picture img {
+  object-fit: contain;
+}
+.aboutUs-text {
+  padding: 20px 50px;
+  text-align: justify;
+}

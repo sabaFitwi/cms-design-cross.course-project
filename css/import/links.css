@@ -1,0 +1,64 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  text-decoration: underline;
+  color: #4b7af0;
+}
+
+/* buttons*/
+.shop-button {
+  background: #f0c14b;
+  color: #000;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #f0c14b;
+}
+
+.cart {
+  background-color: #103444;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px 50px;
+  font-weight: none;
+  margin: 25px;
+  border: 1px solid #103444;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.cart:hover {
+  border: 3px solid #103444;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #103444;
+}
+.fa-customize {
+  color: #fff;
+  margin: 5px;
+  font-size: 30px;
+  margin-top: 0px;
+}
+.fa-customize:hover {
+  color: #4b7af0;
+}

@@ -1,0 +1,14 @@
+:root {
+  --text-paragraph: "Poppins", sans-serif, arial;
+  --text-heading: "comfortaa", sans-serif, arial;
+  --primary-color: #fff;
+  --cart-btn-color: #103444;
+  --active-color: #4b7af0;
+  --gray-background: #707070;
+  --call-to-action-btn-color: #f0c14b;
+
+  --box-shadow-small: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --box-shadow-large: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --green-color: #4bb543;
+  --red-color: #dd0707;
+}

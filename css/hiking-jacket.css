@@ -1,0 +1,74 @@
+.product-details {
+  /* width: 100%; */
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image-slider {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  /* background-image: url(../images/M15.jpg);
+  background-size: cover; */
+  box-shadow: var(--box-shadow-small);
+}
+
+.product-small-images {
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 98%;
+  background: rgb(243, 243, 243);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100px;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.product-small-images img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.product-small-images img.active {
+  opacity: 0.7;
+}
+.detail {
+  width: 50%;
+  margin-top: 120px;
+}
+.detail .detail-title {
+  text-transform: capitalize;
+}
+.detail .product-short-descrip {
+  line-height: 30px;
+  height: auto;
+  margin: 15px 0 30px;
+  color: gray;
+}
+.product-price {
+  font-size: 25px;
+  font-weight: 500;
+}
+.product-specific_detail .cart {
+  margin: 40px 0px;
+  padding: 20px 60px;
+}
+
+.detail-desc {
+  text-transform: capitalize;
+  margin-top: 40px;
+  padding: 60px;
+}
+.desc-heading {
+  text-transform: uppercase;
+}
+.desc {
+  color: gray;
+  font-size: 14px;
+}
