@@ -36,25 +36,20 @@ function generateHtml(results) {
   } else {
     productsContainer.classList.remove("error");
   }
+  const categories = document.querySelectorAll(".categories");
+
+  categories.forEach(function (category) {
+    category.onclick = function (event) {
+      console.log(event);
+      let newUrl;
+      if (event.target.id === "all") {
+        newUrl = url;
+        console.log(newUrl);
+      }
+
+      const selectedCategory = event.target.value;
+      newUrl = url + `?categories=${selectedCategory}`;
+    };
+  });
 }
 getProducts(url);
-
-const categories = document.querySelectorAll(".categories");
-
-categories.forEach(function (category) {
-  category.onclick = function (event) {
-    console.log(event);
-    let newUrl;
-    if (event.target.id === "all") {
-      newUrl = generateHtml();
-      console.log(newUrl);
-    }
-
-    const selectedCategory = event.target.value;
-    newUrl = url + `?categories=${selectedCategory}`;
-
-    productsContainer.innerHTML = "";
-    getProducts(newUrl);
-    console.log(getProducts(newUrl));
-  };
-});
