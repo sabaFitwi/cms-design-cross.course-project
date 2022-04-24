@@ -3,7 +3,7 @@ const cartInfo = document.querySelector(".cart-info");
 export const url = "https://lifeofsea.de/wp-json/wc/store/products";
 
 export async function getProducts() {
-  // productsContainer.innerHTML = `<div class="spinner"></div>`;
+  productsContainer.innerHTML = `<div class="spinner"></div>`;
 
   try {
     const response = await fetch(url);
@@ -13,8 +13,8 @@ export async function getProducts() {
   } catch (error) {
     ("Unexpected error occurred");
   }
-  // productsContainer.innerHTML = displayError;
-  // productsContainer.classList.add("error");
+  productsContainer.innerHTML = displayError;
+  productsContainer.classList.add("error");
 }
 
 let cartArray = [];
@@ -32,7 +32,7 @@ function generateHtml(results) {
       ><div style= "background-image: url(${result.images[0].src})" class="image-products" alt = "${result.category}"></div></a>
                                           <h4>${result.name}</h4>
                                           <p>$ ${price}</p>
-                                          <button class="cart" data-result="${result.id}" >Add to cart</button>
+                                          <button class="cart cart-index" data-result="${result.id}" >Add to cart</button>
                                      </div>`;
     });
   } else {

@@ -152,6 +152,9 @@ nav a:hover {
   margin: 7px;
   font-family: "Poppins", sans-serif, arial;
 }
+.products h4 {
+  font-weight: 300;
+}
 .products p {
   font-size: 26px;
 }

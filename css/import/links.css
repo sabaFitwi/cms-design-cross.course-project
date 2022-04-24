@@ -33,7 +33,7 @@ a {
   color: #fff;
   text-decoration: none;
   font-size: 1em;
-  padding: 5px 50px;
+  padding: 10px 50px;
   font-weight: none;
   margin: 25px;
   border: 1px solid #103444;
@@ -45,6 +45,9 @@ a {
   justify-content: center;
   text-transform: uppercase;
   width: max-content;
+}
+.cart-index {
+  margin: 25px auto 40px;
 }
 
 .cart:hover {

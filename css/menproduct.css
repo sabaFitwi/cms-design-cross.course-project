@@ -6,12 +6,16 @@
 .jacket-page h1 {
   text-align: center;
   margin-top: 40px;
+  font-size: 20px;
 }
 .jacket-page_wrapper {
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: 10px;
+}
+section.jacket-category {
+  margin: auto;
 }
 /* .jacket-category {
   display: flex;
@@ -55,11 +59,10 @@
 }
 .categories {
   display: flex;
-
-  font-size: 14px;
+  padding: 20px 0;
+  font-size: 16px;
   gap: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 60px;
+  font-family: var(--text-paragraph);
 }
 .categories h2 {
   display: none;

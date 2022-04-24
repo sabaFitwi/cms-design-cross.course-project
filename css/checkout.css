@@ -65,8 +65,12 @@
 }
 .checkout-product_size p {
   margin: 10px;
+  font-size: 10px;
 }
 .checkout-product_size h2 {
+  font-size: 14px;
+}
+h1.header-of-cart-page {
   font-size: 20px;
 }
 .title-margin {
