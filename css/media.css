@@ -117,7 +117,10 @@
   .products_card img {
     height: 600px;
   }
-  /**..checkout page..**/
+
+  .detail-desc {
+    margin-top: 80px;
+  }
 }
 
 /*desktop style*/
@@ -279,8 +282,14 @@
     flex-direction: row;
     justify-content: space-around;
   }
+  .detail-desc {
+    margin-top: 130px;
+
+    font-size: 12px;
+  }
 
   .detail {
     margin-top: 0;
+    padding-left: 20px;
   }
 }

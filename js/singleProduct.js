@@ -1,4 +1,5 @@
 import { url } from "./index.js";
+
 // import { getProducts } from "./index.js";
 
 async function getProducts() {
@@ -15,7 +16,8 @@ async function getProducts() {
 
 const productDetail = document.querySelector("main");
 
-let activeImage = 0;
+// let activeImage = 0;
+let cartArray = [];
 
 function getProductsDetail(productUrl) {
   productUrl.forEach(function () {
@@ -33,9 +35,9 @@ function getProductsDetail(productUrl) {
                                  alt = "${product.name}">
     
       <div class="product-small-images">
-        <img src="${product.images[3].src}" alt="Hiking Jacket" data-image=${product.id} class="active small-image" />
+        <img src="${product.images[0].src}" alt="Hiking Jacket" data-image=${product.id} class="active small-image" />
         <img src="${product.images[1].src}" alt="Hiking Jacket" class=" small-image" />
-        <img src="${product.images[3].src}" alt="Hiking Jacket" class="small-image" />
+        <img src="${product.images[2].src}" alt="Hiking Jacket" class="small-image" />
         <img src="${product.images[3].src}" alt="Hiking Jacket" class=" small-image" />
       </div>
     </div>
@@ -52,7 +54,7 @@ function getProductsDetail(productUrl) {
       </select>
       <label for="quantity">Qty:</label>
       <input id="quantity" type="number" value="1" />
-      <a href="../checkout.html" class="cart">Add to cart</a>
+      <a href="../shopping-cart.html" class="cart" data-result="${product.id}">Add to cart</a>
     </div>
   </section>
   <section class="detail-desc">
@@ -62,19 +64,24 @@ function getProductsDetail(productUrl) {
                         
                       `;
   });
-  const productImageSlide = document.querySelector(".product-image-slider");
-  const productImages = document.querySelectorAll(".small-image");
-}
-getProducts();
-// productImages[0].onclick = function () {
-//   productImageSlide.src = productImages[0].src;
-// };
 
-// productImages.forEach((item, i) => {
-//   item.addEventListener("click", () => {
-//     productImages[activeImage].classList.remove("active");
-//     item.classList.add("active");
-//     productImageSlide.style.backgroundImage = `url("${item.src}")`;
-//     activeImage = i;
-//   });
-// });
+  const addToCart = document.querySelector(".cart");
+  const cartInfo = document.querySelector(".cart-info");
+  addToCart.addEventListener("click", (event) => {
+    if (cartArray.length >= 1) {
+      alert("product is already in the cart");
+    } else {
+      const itemToAdd = productUrl.find(
+        (product) => product.id == event.target.dataset.result
+      );
+      cartArray.push(itemToAdd);
+
+      cartInfo.innerHTML = cartArray.length;
+      console.log(cartArray);
+
+      localStorage.setItem("cartItem", JSON.stringify(cartArray));
+    }
+  });
+}
+
+getProducts();

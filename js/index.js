@@ -1,6 +1,6 @@
 const productsContainer = document.querySelector(".all-product");
 const cartInfo = document.querySelector(".cart-info");
-export const url = "http://lifeofsea.de/wp-json/wc/store/products";
+export const url = "https://lifeofsea.de/wp-json/wc/store/products";
 
 export async function getProducts() {
   // productsContainer.innerHTML = `<div class="spinner"></div>`;
@@ -38,6 +38,10 @@ function generateHtml(results) {
   } else {
     productsContainer.classList.remove("error");
   }
+  getCartItem(results);
+}
+
+export function getCartItem(results) {
   const addToCart = document.querySelectorAll(".cart");
   for (let i = 0; i < addToCart.length; i++) {
     addToCart[i].addEventListener("click", (event) => {
@@ -52,10 +56,9 @@ function generateHtml(results) {
         cartArray.push(itemToAdd);
         cartInfo.innerHTML = cartArray.length;
 
-        localStorage.setItem("cart", JSON.stringify(cartArray));
+        localStorage.setItem("cartItem", JSON.stringify(cartArray));
       }
     });
   }
 }
-
 getProducts();

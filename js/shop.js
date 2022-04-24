@@ -1,3 +1,4 @@
+import { getCartItem } from "./index.js";
 const productsContainer = document.querySelector(".all-product");
 const url = "http://lifeofsea.de/wp-json/wc/store/products";
 
@@ -36,6 +37,7 @@ function generateHtml(results) {
   } else {
     productsContainer.classList.remove("error");
   }
+  getCartItem(results);
   const categories = document.querySelectorAll(".categories");
 
   categories.forEach(function (category) {

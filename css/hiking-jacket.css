@@ -62,13 +62,21 @@
 
 .detail-desc {
   text-transform: capitalize;
-  margin-top: 40px;
-  padding: 60px;
+  /* margin-top: 40px; */
+}
+.detail-desc p {
+  width: 90%;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--gray-background);
 }
 .desc-heading {
   text-transform: uppercase;
 }
 .desc {
-  color: gray;
+  color: var(--gray-background);
   font-size: 14px;
+}
+select#size {
+  margin-bottom: 10px;
 }

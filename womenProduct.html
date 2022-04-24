@@ -65,8 +65,8 @@
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="menProduct.html">Men</a></li>
-              <li><a href="menProduct.html" class="active">Women</a></li>
+              <li><a href="menProduct.html">Shop</a></li>
+              <!-- <li><a href="menProduct.html" class="active">Women</a></li> -->
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -92,84 +92,43 @@
     <main class="jacket-page">
       <h1>Men's / Women's</h1>
       <div class="jacket-page_wrapper">
-        <aside class="jacket-category">
-          <h2>Categories</h2>
-          <ul>
-            <li><a href="products/hiking-jacket.html">Ski jackets</a></li>
-            <li><a href="products/hiking-jacket.html">Hiking jackets</a></li>
-            <li><a href="products/hiking-jacket.html">Rain jackets</a></li>
-          </ul>
-        </aside>
-        <section class="all-product all-product_jacket">
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/W1.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Hiking Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/M9.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Ski Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/W2.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Rain Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/mw.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Ski Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/M16.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Hiking Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/W3.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Ski Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/M16.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Rain Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
-          </div>
-          <div class="products">
-            <a href="products/hiking-jacket.html"
-              ><img src="images/mw.jpg" alt="Hiking jacket"
-            /></a>
-            <h3>Ski Jacket</h3>
-            <p>500kr</p>
-            <a href="checkout.html" class="cart">Add to cart</a>
+        <section class="jacket-category">
+          <div class="categories">
+            <h2>Categories</h2>
+            <div class="radio">
+              <input
+                type="radio"
+                id="all"
+                class="category"
+                name="categories"
+                value="19"
+              />
+              <label for="ski-jacket">All Jackets</label>
+            </div>
+            <div class="radio">
+              <input
+                type="radio"
+                id="womens"
+                class="category"
+                name="categories"
+                value="17"
+              />
+              <label for="women-jacket">Women's Jacket</label>
+            </div>
+            <div class="radio">
+              <input
+                type="radio"
+                id="mens"
+                class="category"
+                name="categories"
+                value="16"
+              />
+              <label for="men-jacket">Men's Jacket</label>
+            </div>
           </div>
         </section>
+        <section class="all-product all-product_jacket"></section>
       </div>
-    </main>
     <footer>
       <h4>Copy Right &copy;</h4>
       <div class="icons">
@@ -177,5 +136,6 @@
         <a href="#"><i class="fab fa-instagram fa-customize"></i></a>
       </div>
     </footer>
+    <script type="module" src="js/shop.js"></script>
   </body>
 </html>
