@@ -174,26 +174,16 @@
     list-style-type: none;
     font-size: 20px;
   }
-  .jacket-page_wrapper {
+  /* .jacket-page_wrapper {
     display: flex;
     flex-direction: row;
     flex: 1;
-  }
+  } */
   .jacket-page h1 {
     text-align: center;
     font-size: 30px;
   }
-  .categories {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    gap: 20px;
-    align-items: flex-start;
-    padding-left: 60px;
-  }
-  .categories h2 {
-    display: block;
-  }
+
   /* aside.jacket-category {
     display: flex;
     flex-direction: column;
@@ -216,9 +206,7 @@
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
   }
-  section.jacket-category {
-    margin: 0;
-  }
+
   /*...contact page..*/
   .contact-page_wrapper {
     display: flex;
