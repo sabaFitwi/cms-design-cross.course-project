@@ -55,7 +55,9 @@ function createShoppingCart() {
                               </div>
                               <div class="total">
                                   <p>Total</p>
-                                  <p class="gran-total">US $${totalUnitPrice}</p>
+                                  <p class="gran-total">US $${totalUnitPrice.toFixed(
+                                    2
+                                  )}</p>
                             </div>
 
                         `;

@@ -51,3 +51,6 @@ p.title-color {
 .inCart-number {
   color: var(--red-color);
 }
+.number-input {
+  width: 20px;
+}
