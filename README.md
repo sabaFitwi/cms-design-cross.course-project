@@ -14,7 +14,7 @@ In this project i have created a Rainydays website with the following pages:
 - shopping cart
 - products page
 -	Contact page.
-In this project it has been used the WordPress REST API to manage the products for the website
+- In this project it has been used the WordPress REST API to fetch data for the website.
 
 ## List of Languages
 
@@ -31,8 +31,8 @@ In this project it has been used the WordPress REST API to manage the products f
   
  ## List to do
   - Make the fillter functional
-  - creating a checkout page and login page
-  - making the submission details save in wordpress
+  - Creating a checkout page and login page
+  - Making the submission details save in wordpress
  
   
 
