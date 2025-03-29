@@ -1,6 +1,6 @@
 import { getCartItem } from './index.js';
 const productsContainer = document.querySelector('.all-product');
-const url = 'http://rainydays.local/wp-json/wc/store/products';
+const url = 'https://rainydays.local/wp-json/wc/store/products';
 
 export async function getProducts(url) {
   // productsContainer.innerHTML = `<div class="spinner"></div>`;
