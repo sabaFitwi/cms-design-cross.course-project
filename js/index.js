@@ -1,6 +1,6 @@
-const productsContainer = document.querySelector(".all-product");
-const cartInfo = document.querySelector(".cart-info");
-export const url = "https://lifeofsea.de/wp-json/wc/store/products";
+const productsContainer = document.querySelector('.all-product');
+const cartInfo = document.querySelector('.cart-info');
+export const url = 'http://rainydays.local/wp-json/wc/store/products';
 
 export async function getProducts() {
   productsContainer.innerHTML = `<div class="spinner"></div>`;
@@ -11,20 +11,20 @@ export async function getProducts() {
     const dataJson = data;
     generateHtml(dataJson);
   } catch (error) {
-    ("Unexpected error occurred");
+    ('Unexpected error occurred');
   }
-  productsContainer.innerHTML = displayError;
-  productsContainer.classList.add("error");
+  //productsContainer.innerHTML = displayError;
+  //productsContainer.classList.add("error");
 }
 
 let cartArray = [];
 
 function generateHtml(results) {
-  productsContainer.innerHTML = "";
+  productsContainer.innerHTML = '';
 
   if (results) {
     results.forEach(function (result) {
-      let price = Number(result.prices.price.replace("$", " ") * 0.01).toFixed(
+      let price = Number(result.prices.price.replace('$', ' ') * 0.01).toFixed(
         2
       );
       productsContainer.innerHTML += `<div class = "products">
@@ -36,19 +36,19 @@ function generateHtml(results) {
                                      </div>`;
     });
   } else {
-    productsContainer.classList.remove("error");
+    productsContainer.classList.remove('error');
   }
   getCartItem(results);
 }
 
 export function getCartItem(results) {
-  const addToCart = document.querySelectorAll(".cart");
+  const addToCart = document.querySelectorAll('.cart');
   for (let i = 0; i < addToCart.length; i++) {
-    addToCart[i].addEventListener("click", (event) => {
+    addToCart[i].addEventListener('click', (event) => {
       if (
         cartArray.some((result) => result.id == event.target.dataset.result)
       ) {
-        alert("product is already in the cart");
+        alert('product is already in the cart');
       } else {
         const itemToAdd = results.find(
           (product) => product.id == event.target.dataset.result
@@ -56,7 +56,7 @@ export function getCartItem(results) {
         cartArray.push(itemToAdd);
         cartInfo.innerHTML = cartArray.length;
 
-        localStorage.setItem("cartItem", JSON.stringify(cartArray));
+        localStorage.setItem('cartItem', JSON.stringify(cartArray));
       }
     });
   }

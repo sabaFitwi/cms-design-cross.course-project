@@ -80,3 +80,52 @@
 select#size {
   margin-bottom: 10px;
 }
+/* Add to your existing hiking-jacket.css */
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message .button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.cart {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.cart:hover {
+  background-color: #2980b9;
+}
+
+.small-image {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.small-image.active {
+  border: 2px solid #3498db;
+}
+
+#quantity {
+  width: 60px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
