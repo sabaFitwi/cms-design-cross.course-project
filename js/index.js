@@ -1,6 +1,6 @@
 const productsContainer = document.querySelector('.all-product');
 const cartInfo = document.querySelector('.cart-info');
-export const url = 'http://rainydays.local/wp-json/wc/store/products';
+export const url = 'https://rainydays.local/wp-json/wc/store/products';
 
 export async function getProducts() {
   productsContainer.innerHTML = `<div class="spinner"></div>`;
