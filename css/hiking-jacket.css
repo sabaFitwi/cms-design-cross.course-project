@@ -102,7 +102,7 @@ select#size {
 .cart {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #3498db;
+  background-color: var(--cart-btn-color);
   color: white;
   text-decoration: none;
   border-radius: 4px;
